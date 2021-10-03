@@ -8,4 +8,4 @@
 
 
 
-![screenshot](images/screeshot.png)
+![screenshot](images/screenshot.png)
