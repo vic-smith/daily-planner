@@ -4,19 +4,24 @@ var hour = moment().hour(); // Number
 var timeEl = "9 10 11 12 13 14 15 16 17";
 var idList = timeEl.split(" ");
 var button = document.querySelectorAll('button')
-//var text = document.getElementById("").value
+
 currentDay.text(momentDate);
 
+function loadEv() {
+  text = JSON.parse(localStorage.getItem("events"));
+  document.querySelector("textarea").value = text;
+  console.log(text)
+}
 
-let events = {};
+let events = [];
 
 function saveEvent() {
   let event = 
-  document.getElementById("9").value
+  document.querySelector("textarea").value;
   
-  //events.push(event);
+  events.push(event);
 
-  localStorage.setItem("events", JSON.stringify(event));
+  localStorage.setItem("events", JSON.stringify(events));
 }
 
 
@@ -47,7 +52,7 @@ function timeAdjust() {
     }
 
   }
-   text = JSON.parse(localStorage.getItem("events"));
+  
 };
 
 
@@ -58,7 +63,4 @@ setInterval(function () {
 
 timeAdjust();
 
-
-
-
-
+loadEv();
