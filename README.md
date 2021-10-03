@@ -8,4 +8,4 @@
 
 
 
-![screenshot](daily-planner/images/work day planner.png)
+![screenshot](images/screeshot.png)
